@@ -2,7 +2,7 @@
 <html>
 <head>
 </head>
-<div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/homepage/n1.jpg')?>');">
+<div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/shop/sta/bg.jpg')?>');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
