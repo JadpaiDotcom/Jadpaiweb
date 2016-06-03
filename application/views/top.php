@@ -50,7 +50,7 @@
             <li><a href="<?php echo site_url('shop/food')?>">อาหาร</a></li>
             <li><a href="<?php echo site_url('shop/snack')?>">ของกินเล่น</a></li>
             <li><a href="<?php echo site_url('shop/drink')?>">เครื่องดิ่ม</a></li>
-            <li><a href="<?php echo site_url('shop/etc')?>">จิปถะ</a></li>
+            <li><a href="<?php echo site_url('shop/etc')?>">จิปาถะ</a></li>
             <li><a href="<?php echo site_url('shop/sta')?>">เครื่องเขียน</a></li>
           </ul>
         </li>
