@@ -13,6 +13,7 @@ html {
 }
 
 body {
+	background:url(../images/bg.jpg)  no-repeat center fixed;
   background-color: #2c3338;
   color: #606468;
   font: 400 0.875rem/1.5 "Open Sans", sans-serif;

@@ -15,7 +15,6 @@
 			<!--start-login-form-->
 				<div class="main">
 			    	<div class="login-head">
-					    <h1>Elegant Login  and Register forms</h1>
 					</div>
 					<div  class="wrap">
 						  <div class="Regisration">
