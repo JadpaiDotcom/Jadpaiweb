@@ -18,6 +18,7 @@ class shop extends CI_Controller {
 	{
 		$this->load->view('top');
 		$this->load->view('shop/food');
+		$this->load->view('shop/shopfood');
 		$this->load->view('down');
 	}
 	public function snack()
