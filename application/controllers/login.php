@@ -12,10 +12,17 @@ class Login extends CI_Controller {
 	{
 		$u=(isset($_POST["username"])?$_POST["username"]:"");
 		$p=(isset($_POST["password"])?$_POST["password"]:"");
-		$this->load->model('load_db');
-		$confirm=$this->load_db->checklogin($u,$p);
-		if($confirm){
+		$this->load->model('db');
+		$confirm=$this->db->checklogin($u,$p);
+		if( $_SESSION['employee_type']==1){
+			
+		}
+		else if ( $_SESSION['employee_type'] == 2){
 			redirect('/op/', 'refresh');
+		}
+		else if ( $_SESSION['employee_type'] == 3){
+
+
 		}
 		else{
 			Echo "Error!";

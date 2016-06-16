@@ -48,11 +48,8 @@ class load_db extends CI_Model {
                 if($db_p == $p){
                     $db_c = true;
                     //set session//
-                    $_SESSION['username']=$row->username;
-                    $_SESSION['password']=$row->password;
-                    $_SESSION['status']=1;
-                    $this->session->set_flashdata('msg_type','success');
-                    $this->session->set_flashdata('msg_data','Welcome  '.$row->username);
+                    $_SESSION['employee_username']=$row->username;
+                    $_SESSION['employee_type']=$row->employee_type;
                 }
                 else{
                     $this->session->set_flashdata('msg_type','error');
@@ -64,7 +61,7 @@ class load_db extends CI_Model {
 }
 
         public function getDetail(){
-            $sql = "SELECT * FROM carid join cartype on type=id_type ;";
+            $sql = "SELECT * FROM order ;";
             $result=$this->db->query($sql);
             return $result;
 
