@@ -25,24 +25,28 @@ class shop extends CI_Controller {
 	{
 		$this->load->view('top');
 		$this->load->view('shop/snack');
+		$this->load->view('shop/snackshop');
 		$this->load->view('down');
 	}
 	public function drink()
 	{
 		$this->load->view('top');
 		$this->load->view('shop/drink');
+		$this->load->view('shop/drinkshop');
 		$this->load->view('down');
 	}
 	public function etc()
 	{
 		$this->load->view('top');
 		$this->load->view('shop/etc');
+		$this->load->view('shop/etcshop');
 		$this->load->view('down');
 	}
 	public function sta()
 	{
 		$this->load->view('top');
 		$this->load->view('shop/sta');
+		$this->load->view('shop/stashop');
 		$this->load->view('down');
 	}
 
