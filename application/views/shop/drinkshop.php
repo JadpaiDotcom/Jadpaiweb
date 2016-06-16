@@ -53,9 +53,9 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/drink/w2.png" alt="">
+                            <img src="<?php echo base_url()?>img/shop/drink/w6.png" alt="">
                         </div>
-                        <h2><a href="">โค๊ก </a></h2>
+                        <h2><a href="">โค๊ก (กระป๋อง)</a></h2>
                         <div class="product-carousel-price">
                             <ins>15บาท</ins>
                         </div>  
@@ -69,11 +69,11 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-1.jpg" alt="">
+                            <img src="<?php echo base_url()?>img/shop/drink/w7.png" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">สไปรท์ (กระป๋อง)</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>15 บาท</ins>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -84,11 +84,47 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-3.jpg" alt="">
+                            <img src="<?php echo base_url()?>img/shop/drink/w3.png" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">น้ำดื่มคริสตัล</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>14 บาท</ins>
+                        </div>  
+                        
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>                       
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <div class="product-upper">
+                            <img src="<?php echo base_url()?>img/shop/drink/w4.png" alt="">
+                        </div>
+                        <h2><a href="">อิชิตัน (ขวดเล็ก)</a></h2>
+                        <div class="product-carousel-price">
+                            <ins>20 บาท</ins>
+                        </div>  
+                        
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>                       
+                    </div>
+                </div>
+
+                <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <div class="product-upper">
+                            <img src="<?php echo base_url()?>img/shop/drink/w5.png" alt="">
+                        </div>
+                        <h2><a href="">โออิชิ</a></h2>
+                        <div class="product-carousel-price">
+                            <ins>22 บาท</ins>
                         </div>  
                         
                         <div class="product-option-shop">
