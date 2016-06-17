@@ -1,6 +1,6 @@
 <style type="text/css">
 table.three{ 
-    width: 300%;
+    width: 100%;
     padding: 12px 20px;
     font-size: 18px;
 } 
@@ -48,8 +48,8 @@ input[type=submit] {
         <div class="row">
             <div class="col-lg-12">
                 <h4 class="page-header">
-                    <?php echo "welcome   ".$_SESSION['fname']."(ผู้ดูแลระบบ)";    ?>
-                    <form method="post" action="<?php echo base_url('index.php/employeeclass/logout');?>">
+                    <?php echo "welcome   ".$_SESSION['employee_username']."(ผู้ดูแลระบบ)";    ?>
+                    <form method="post" action="<?php echo site_url();?>">
 <br><br><input type="submit" value="logout" >
 </form>
                  </h4>
@@ -57,36 +57,31 @@ input[type=submit] {
             </div>
             <div class="col-md-4">
 
-<form method="get" action="<?php echo base_url('index.php/employeeclass/seach1');?>">
-Name : <input type="text" name="name">
-<input type="submit" value="ค้นหา" >
-</form>
-
 <?php 
   if($datalist->num_rows()==0)echo '<font color="red">Data not found!</font>';   
   else{        
  echo '<table border="1" class="three">
                 <tr>
-                <th>Edit</th>
-                <th>Delete</th>
-                <th>ID</th>
-                <th>Brand</th>
-                <th>Generation</th>
-                <th>Type</th>
-                <th>Engine</th>
-                <th>Color</th>';
+                <th>รับคำสั่งซื้อ</th>
+                <th>ยกเลิก</th>
+                <th>OrderID</th>
+                <th>Sale status</th>
+                <th>Order_status</th>
+                <th>order_date</th>
+                <th>Name Customer</th>
+                <th>buy_id</th>';
                foreach($datalist->result() as $row){
                 echo "<tr>";
-                echo '<td><a href="'.site_url('employeeclass/edit/'.$row->idcar).'">
-                <input type="button" value="edit"></a></td>';
-                echo '<td><a href="'.site_url('employeeclass/delete/'.$row->idcar).'">
-                <input type="button" value="delete"></a></td>';
-                echo "<td>".$row->idcar."</td>";
-                echo "<td>".$row->brand."</td>";
-                echo "<td>".$row->generation."</td>";
-                echo "<td>".$row->nametype."</td>";
-                echo "<td>".$row->engine."</td>";
-                echo "<td>".$row->color."</td>";
+                echo '<td><a href="'.site_url('employeeclass/edit/'.$row->order_id).'">
+                <input type="button" value="รับคำสั่งซื้อ"></a></td>';
+                echo '<td><a href="'.site_url('employeeclass/delete/'.$row->order_id).'">
+                <input type="button" value="ยกเลิก"></a></td>';
+                echo "<td>".$row->order_place."</td>";
+                echo "<td>".$row->sale_name."</td>";
+                echo "<td>".$row->order_name."</td>";
+                echo "<td>".$row->order_date."</td>";
+                echo "<td>".$row->customer_name."</td>";
+                echo "<td>".$row->buy_buy_id."</td>";
                 echo "</tr>";
         }
         echo '</table>';

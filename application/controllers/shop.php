@@ -49,5 +49,12 @@ class shop extends CI_Controller {
 		$this->load->view('shop/stashop');
 		$this->load->view('down');
 	}
+	public function test()
+	{
+		$name = (isset($_GET['name'])?$_GET['name']:'');
+		$price = (isset($_GET['price'])?$_GET['price']:'');
+		$data = array('name'=> $name , 'price'=> $price);
+		$this->load->view('login/inputdata',$data);
+	}
 
 }
