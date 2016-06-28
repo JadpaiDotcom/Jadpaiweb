@@ -1,5 +1,5 @@
 <?php
-$_session['customer_username']=(isset($_session['customer_username'])?$_session['customer_username  ']:"");
+$_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION['customer_username']:"");
 
 ?>
 
@@ -25,7 +25,7 @@ $_session['customer_username']=(isset($_session['customer_username'])?$_session[
         <li><a href="<?php echo site_url('welcome/tracking')?>">Tracking</a></li>
         <li><a href="<?php echo site_url('welcome/contact')?>">Contact</a></li>
         <?php
-        if ($_session['customer_username']==""){
+        if ($_SESSION['customer_username']==""){
         echo "<li><a href=";
         echo site_url('login');
         echo ">Login</a></li>";
@@ -35,7 +35,11 @@ $_session['customer_username']=(isset($_session['customer_username'])?$_session[
         }
         else
         {
-          echo "<li> welcome :".$_session['customer_username']."</li>";
+          echo "<li> welcome :".$_SESSION['customer_username']."</li>";
+          ////sign-out////
+          echo "<li><a href=";
+          echo site_url('login/logout');
+          echo ">Logout</a></li>";
 
         }
         ?>

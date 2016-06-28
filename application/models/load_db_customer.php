@@ -37,18 +37,18 @@ class load_db_customer extends CI_Model {
         }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public function checklogin($u,$p){
-        	$sql = "SELECT * FROM employee where username = '".$u."'and password = '".$p."';";
+        	$sql = "SELECT * FROM customer where customer_username = '".$u."'and customer_password = '".$p."';";
         	$query=$this->db->query($sql);
             $db_u="";
             $db_p="";
             $db_c=false;
         	foreach($query->result() as $row){
-                $db_p = $row->password;
-                $db_u = $row->username;
-                if($db_p == $p){
+                $db_p = $row->customer_password;
+                $db_u = $row->customer_username;
+                if($db_p == $p && $db_u == $u){
                     $db_c = true;
                     //set session//
-                    $_SESSION['customer_username']=$row->username;
+                    $_SESSION['customer_username']=$row->customer_username;
                 }
                 else{
                     $this->session->set_flashdata('msg_type','error');
@@ -58,7 +58,7 @@ class load_db_customer extends CI_Model {
             return $db_c;
 
 }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public function getDetail(){
             $sql = "SELECT * FROM order ;";
             $result=$this->db->query($sql);
