@@ -34,83 +34,25 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/food/f1.png" alt="">
-                        </div>
-                        <h2><a href="">ข้าวกระเพราหมู ไข่ดาว</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>40 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        <?php
+ foreach($data_result->result_array() as $row){
+               echo "<div class='col-md-3 col-sm-6'>
+                    <div class='single-shop-product'>
+                      <div class='product-upper'>
+                        <img src=";echo base_url()."img/shop/".$row['product_link']." alt= ></div>";
+               echo  "<h2><a href=''>".$row['product_name']."</a></h2>
+                        <div class='product-carousel-price'>
+                            <ins>".$row['product_cost']."บาท</ins>
+                        </div>";   
+               echo         "<div class='product-option-shop'>
+                            <a class='add_to_cart_button' data-quantity='1' data-product_sku='' data-product_id='70' rel='nofollow' href=".site_url('/shop/').">Add to cart</a>
                         </div>                       
                     </div>
-                </div>
-<!-- ////////////////////////////////////////////// 1 Item /////////////////////////////////////////////////////////////////////// -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/food/f2.png" alt="">
-                        </div>
-                        <h2><a href=""><P>ข้าวคลุกกระปิ</P></a></h2>
-                        <div class="product-carousel-price">
-                            <ins>45 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-<!-- ////////////////////////////////////////////// 1 Item /////////////////////////////////////////////////////////////////////// -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/food/f3.png" alt="">
-                        </div>
-                        <h2><a href="">ราเมง</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>50 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/food/f4.png" alt="">
-                        </div>
-                        <h2><a href="">ก๋วยเตี๋ยวเรือ</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>40 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/food/f5.png" alt="">
-                        </div>
-                        <h2><a href="">ข้าวผัดกุ้ง</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>40 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
+                </div>";
+          
+}
+                ?>
+
 
 
   <!--          

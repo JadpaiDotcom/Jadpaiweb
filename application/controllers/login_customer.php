@@ -18,7 +18,7 @@ class Login_customer extends CI_Controller {
 			redirect('/Welcome/');
 		}
 		else{
-			redirect('/login/');
+			redirect('/Login_customer/');
 		}
 	}
 
