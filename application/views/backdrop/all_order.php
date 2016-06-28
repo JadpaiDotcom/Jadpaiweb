@@ -1,47 +1,12 @@
-<style type="text/css">
-table.three{ 
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 18px;
-} 
-table.three th { 
-font-weight:bold; 
-border-bottom:1px solid #CCC; 
-border-top:1px solid #CCC; 
-background-color: #4CAF50 ;
-text-align: center;
-color:#000000;
-}
-table.three td { 
-padding:2px; 
-border-bottom:0.5px dotted #CCC;
-text-align: left; 
-}
 
-input[type=text], select {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-p{
-    text-align: right;
-}
-input[type=submit] {
-    width: 20%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-</style>
-
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Manager</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>style/backdrop/style.css">
+  </head>
+  <body>
  <div class="container">
 
         <!-- Marketing Icons Section -->
@@ -94,3 +59,6 @@ input[type=submit] {
     </div>
 </div>
 
+    
+  </body>
+</html>
