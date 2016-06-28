@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login_emp extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login/login');
+		$this->load->view('login/login_emp');
 	}
 
 	public function checklogin()
@@ -14,6 +14,7 @@ class Login extends CI_Controller {
 		$p=(isset($_POST["password"])?$_POST["password"]:"");
 		$this->load->model('load_db');
 		$confirm=$this->load_db->checklogin($u,$p);
+		if($confirm){
 		if( $_SESSION['employee_type']=='1'){
 			echo "SSS1";
 		}
@@ -22,11 +23,10 @@ class Login extends CI_Controller {
 		}
 		else if ( $_SESSION['employee_type'] == '3'){
 			echo "SSS3";
-
+		}
 		}
 		else{
 			Echo "Error!";
-			redirect('/login/');
 		}
 	}
 

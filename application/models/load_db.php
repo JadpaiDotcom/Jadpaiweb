@@ -37,7 +37,7 @@ class Load_db extends CI_Model {
         }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public function checklogin($u,$p){
-            $sql = "SELECT * FROM employee where employee_username = '".$u."'and employee_password = '".$p."';";
+            $sql = "SELECT * FROM employee where employee_username = '".$u."'and employee_password = '".$p."' and   employee_status = '1' ;";
             $query=$this->db->query($sql);
             $db_u="";
             $db_p="";

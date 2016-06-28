@@ -24,13 +24,20 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
         <li><a href="<?php echo base_url();?>"><i class="fa fa-lg fa-home"></i></a></li>
         <li><a href="<?php echo site_url('welcome/tracking')?>">Tracking</a></li>
         <li><a href="<?php echo site_url('welcome/contact')?>">Contact</a></li>
-        <?php
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace">
+         <?php
         if ($_SESSION['customer_username']==""){
         echo "<li><a href=";
-        echo site_url('login');
+        echo site_url('login_customer');
         echo ">Login</a></li>";
         echo "<li><a href=";
-        echo site_url('login/register');
+        echo site_url('login_emp');
+        echo ">Admin</a></li>";
+        echo "<li><a href=";
+        echo site_url('login_customer/register');
         echo ">Register</a></li>";
         }
         else
@@ -38,17 +45,11 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
           echo "<li> welcome :".$_SESSION['customer_username']."</li>";
           ////sign-out////
           echo "<li><a href=";
-          echo site_url('login/logout');
+          echo site_url('logout');
           echo ">Logout</a></li>";
 
         }
         ?>
-      </ul>
-    </div>
-    <div class="fl_right">
-      <ul class="nospace">
-        <li><i class="fa fa-phone"></i> 0881234567</li>
-        <li><i class="fa fa-envelope-o"></i> Jadpai@gmail.com</li>
       </ul>
     </div>
     <!-- ################################################################################################ -->

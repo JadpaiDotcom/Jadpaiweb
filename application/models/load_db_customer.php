@@ -1,6 +1,6 @@
 <?php 
 
-class load_db_customer extends CI_Model {
+class Load_db_customer extends CI_Model {
 
         public $title;
         public $content;
