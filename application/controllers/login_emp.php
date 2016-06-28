@@ -30,10 +30,6 @@ class Login_emp extends CI_Controller {
 		}
 	}
 
-	public function register()
-	{
-		$this->load->view('login/register');
-	}
 	public function register_new()
 	{
 		$fname=(isset($_POST["fname"])?$_POST["fname"]:"");

@@ -40,7 +40,7 @@
 
       </form>
 
-      <p class="text--center">Not a member? <a href="<?php echo site_url('login/register')?>">Sign up now</a> <span class="fontawesome-arrow-right"></span></p>
+      <p class="text--center">Not a member? <a href="<?php echo site_url('Login_customer/register')?>">Sign up now</a> <span class="fontawesome-arrow-right"></span></p>
 
     </div>
 

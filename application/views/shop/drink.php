@@ -8,8 +8,8 @@
     <!-- ################################################################################################ -->
     <article>
       <div>
-        <p class="heading">จัดไป</p>
-        <h2 class="heading">Drink</h2>
+        <p class="heading">JADPAI</p>
+        <h2 class="heading">Drink</a></h2>
         <p>เครื่องดื่มหลากหลายอย่างให้เลือกลองชิม</p>
       </div>
     </article>

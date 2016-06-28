@@ -22,7 +22,7 @@
 
     <div class="grid__container">
 
-      <form action="<?php echo site_url('login/checklogin')?>" method="post" class="form form--login">
+      <form action="<?php echo site_url('login_emp/checklogin')?>" method="post" class="form form--login">
 
         <div class="form__field">
           <label class="fontawesome-user" for="login__username"><span class="hidden">Username</span></label>
