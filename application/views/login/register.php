@@ -21,7 +21,7 @@
 						  	<div class="Regisration-head">
 						    	<h2><span></span>Register</h2>
 						 	 </div>
-						  	<form action="<?php echo site_url('login/register_new')?>" method="POST">
+						  	<form action="<?php echo site_url('login_customer/register_new')?>" method="POST">
 						  		<input type="text" name="fname" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'fname';}" >
 						  		<input type="text" name="lname" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'lname';}" >
 						  		<input type="text" name="tel" value="Tel." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'tel';}" >

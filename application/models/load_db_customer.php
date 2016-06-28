@@ -58,32 +58,10 @@ class Load_db_customer extends CI_Model {
             return $db_c;
 
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public function getDetail(){
-            $sql = "SELECT * FROM order ;";
-            $result=$this->db->query($sql);
-            return $result;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        }
-
-         public function getDetail_edit($lc_plate){
-            $sql = "SELECT * FROM carid join cartype on type=id_type where lc_plate ='".$lc_plate."';";
-            $result=$this->db->query($sql);
-            return $result;
-
-        }
-
-        public function type_Detail(){
-            $sql = "SELECT * FROM cartype ;";
-            $result=$this->db->query($sql);
-            return $result;
-
-        }
-
-
-
-         public function add_data($type,$color,$lc_plate,$time_start,$time_end,$dec_start,$dec_end){
-            $sql="INSERT INTO carid VALUES ('".$type."','".$color."','".$lc_plate."','".$time_start."','".$time_end."','".$dec_start."','".$dec_end."','1'  );";
+         public function add_user($fname,$lname,$tel,$address,$username,$password){
+            $sql="INSERT INTO customer (customer_username,customer_password,customer_name,customer_lastname,customer_tel,customer_address,customer_status) VALUES ('".$username."','".$password."','".$fname."','".$lname."','".$tel."','".$address."','1');";
             $result=$this->db->query($sql);
             return $result;
 

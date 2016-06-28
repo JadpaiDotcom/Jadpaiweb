@@ -34,14 +34,14 @@ class Login_customer extends CI_Controller {
 		$address=(isset($_POST["address"])?$_POST["address"]:"");
 		$username=(isset($_POST["username"])?$_POST["username"]:"");
 		$password=(isset($_POST["password"])?$_POST["password"]:"");
-		$this->load->model('load_db');
-		$result=$this->load_db->add_user($fname,$lname,$tel,$address,$username,$password);
+		$this->load->model('load_db_customer');
+		$result=$this->load_db_customer->add_user($fname,$lname,$tel,$address,$username,$password);
 		if($result){
-			redirect('/login/');
+			redirect('/Login_customer/');
 		}
 		else{
 			echo "ERROR Register";
-			redirect('/login/');
+			redirect('/Login_customer/');
 		}
 		
 	}
