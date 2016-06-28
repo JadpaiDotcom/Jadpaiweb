@@ -45,7 +45,7 @@ class Load_db extends CI_Model {
             foreach($query->result() as $row){
                 $db_p = $row->employee_password;
                 $db_u = $row->employee_username;
-                if($db_p == $p){
+                if($db_p == $p && $db_u == $u){
                     $db_c = true;
                     //set session//
                     $_SESSION['employee_username']=$row->employee_username;

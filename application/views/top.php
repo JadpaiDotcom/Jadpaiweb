@@ -1,3 +1,9 @@
+<?php
+$_session['customer_username']=(isset($_session['customer_username'])?$_session['customer_username  ']:"");
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +22,23 @@
     <div class="fl_left">
       <ul class="nospace">
         <li><a href="<?php echo base_url();?>"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="<?php echo site_url('welcome/about')?>">About</a></li>
+        <li><a href="<?php echo site_url('welcome/tracking')?>">Tracking</a></li>
         <li><a href="<?php echo site_url('welcome/contact')?>">Contact</a></li>
-        <li><a href="<?php echo site_url('login')?>">Login</a></li>
-        <li><a href="<?php echo site_url('login/register')?>">Register</a></li>
+        <?php
+        if ($_session['customer_username']==""){
+        echo "<li><a href=";
+        echo site_url('login');
+        echo ">Login</a></li>";
+        echo "<li><a href=";
+        echo site_url('login/register');
+        echo ">Register</a></li>";
+        }
+        else
+        {
+          echo "<li> welcome :".$_session['customer_username']."</li>";
+
+        }
+        ?>
       </ul>
     </div>
     <div class="fl_right">

@@ -1,6 +1,6 @@
 <?php 
 
-class load_db extends CI_Model {
+class load_db_customer extends CI_Model {
 
         public $title;
         public $content;
@@ -48,8 +48,7 @@ class load_db extends CI_Model {
                 if($db_p == $p){
                     $db_c = true;
                     //set session//
-                    $_SESSION['employee_username']=$row->username;
-                    $_SESSION['employee_type']=$row->employee_type;
+                    $_SESSION['customer_username']=$row->username;
                 }
                 else{
                     $this->session->set_flashdata('msg_type','error');
