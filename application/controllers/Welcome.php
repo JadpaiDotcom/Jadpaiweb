@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 
 	public function tracking(){
 		$this->load->view('top');
-		$this->load->view('about');
+		$this->load->view('backdrop/tracking');
 		$this->load->view('down');
 	}
 
