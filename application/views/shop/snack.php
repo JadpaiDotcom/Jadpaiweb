@@ -9,7 +9,7 @@
     <article>
       <div>
         <p class="heading">Jadpai</p>
-        <a href="<?php echo site_url('shop/drink')?>"><h2 class="heading">Snack</a></h2>
+        <a href="<?php echo site_url('shop/snack')?>"><h2 class="heading">Snack</a></h2>
         <p>ของกินเล่นเพลินๆ</p>
       </div>
     </article>

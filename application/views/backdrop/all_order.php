@@ -30,6 +30,7 @@
                 <tr>
                 <th>รับคำสั่งซื้อ</th>
                 <th>ยกเลิก</th>
+                <th>Employee</th>
                 <th>OrderID</th>
                 <th>Sale status</th>
                 <th>Order_status</th>
@@ -42,6 +43,11 @@
                 <input type="button" value="รับคำสั่งซื้อ"></a></td>';
                 echo '<td><a href="'.site_url('employeeclass/delete/'.$row->order_id).'">
                 <input type="button" value="ยกเลิก"></a></td>';
+                echo "<td><select>";
+                foreach($emp->result() as $row){
+                       echo "<option value=".$row->employee_id.">".$row->employee_name."</option>";
+                    }
+                    echo  "</select>";
                 echo "<td>".$row->order_place."</td>";
                 echo "<td>".$row->sale_name."</td>";
                 echo "<td>".$row->order_name."</td>";

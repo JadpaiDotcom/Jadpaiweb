@@ -35,10 +35,9 @@ class Load_db extends CI_Model {
         }
 
          public function getDetail_emp(){
-            $sql = "SELECT * FROM `order` join sale_status on id_sale_status = sale_status join order_status on order_status = id_order_status join customer on customer_id = customer_customer_id where ;";
+            $sql = "SELECT * FROM `employee`";
             $result=$this->db->query($sql);
             return $result;
-
         }
 
 

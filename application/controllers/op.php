@@ -7,7 +7,8 @@ class Op extends CI_Controller {
 	{
 		$this->load->model('load_db');
 		$result=$this->load_db->getDetail();
-		$data = array("datalist"=>$result);
+		$emp=$this->load_db->getDetail_emp();
+		$data = array("datalist"=>$result,"emp"=>$emp);
 		$this->load->view('backdrop/all_order',$data);
 	}
 
