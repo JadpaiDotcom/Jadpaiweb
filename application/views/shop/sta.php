@@ -8,7 +8,7 @@
     <article>
       <div>
         <p class="heading">Jadpai</p>
-        <h2 class="heading">Stationery</h2>
+         <a href="<?php echo site_url('shop/sta')?>"><h2 class="heading">Stationery</a></h2>
         <p>อุปกรณ์เครื่องเขียนนานาชนิด</p>
       </div>
     </article>

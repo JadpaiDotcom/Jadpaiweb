@@ -34,115 +34,26 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/etc/etc5.png" alt="">
-                        </div>
-                        <h2><a href="">ยาสีฟันคอลเกต</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>19 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                       <?php
+ foreach($data_result->result_array() as $row){
+               echo "<div class='col-md-3 col-sm-6'>
+                    <div class='single-shop-product'>
+                      <div class='product-upper'>
+                        <img src=";echo base_url()."img/shop/".$row['product_link']." alt= ></div>";
+               echo  "<h2><a href=''>".$row['product_name']."</a></h2>
+                        <div class='product-carousel-price'>
+                            <ins>".$row['product_cost']."บาท</ins>
+                        </div>"; 
+                echo "<form method='POST' action='".site_url('cart')."' >";
+                echo "<input type='text' name='product_id' value='".$row['product_id']."'hidden>";   
+               echo         "<div class='product-option-shop'>
+                            <input type='submit' value='Add to cart'></a></form>
                         </div>                       
                     </div>
-                </div>
-<!-- ////////////////////////////////////////////// 1 Item /////////////////////////////////////////////////////////////////////// -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/etc/etc2.png" alt="">
-                        </div>
-                        <h2><a href="">สบู่ Protex</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>20 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-<!-- ////////////////////////////////////////////// 1 Item /////////////////////////////////////////////////////////////////////// -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/etc/etc3.png" alt="">
-                        </div>
-                        <h2><a href="">ยาสีฟัน Colgate</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>25 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/etc/etc4.png" alt="">
-                        </div>
-                        <h2><a href="">ผ้าอนามัย โซฟี</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>20 บาท</ins>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="<?php echo base_url()?>img/shop/etc/etc6.png" alt="">
-                        </div>
-                        <h2><a href="">แป้งเย็นตรางู</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>32 บาท</ins>
-                        </div>  
-                        
-                       <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-                
-            
-         <!--   <div class="row">
-                <div class="col-md-12">
-                    <div class="product-pagination text-center">
-                        <nav>
-                          <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+                </div>";
+          
+}
+                ?>
 
 
     <!-- Latest jQuery form server -->

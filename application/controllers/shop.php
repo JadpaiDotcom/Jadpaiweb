@@ -25,10 +25,13 @@ class shop extends CI_Controller {
 		$this->load->view('down');
 	}
 	public function snack()
-	{
+	{	
+		$this->load->model('load_db_product');
+		$result=$this->load_db_product->snack_product();
+		$data=array("data_result"=>$result);
 		$this->load->view('top');
 		$this->load->view('shop/snack');
-		$this->load->view('shop/snackshop');
+		$this->load->view('shop/snackshop',$data);
 		$this->load->view('down');
 	}
 	public function drink()
@@ -42,25 +45,24 @@ class shop extends CI_Controller {
 		$this->load->view('down');
 	}
 	public function etc()
-	{
+	{	
+		$this->load->model('load_db_product');
+		$result=$this->load_db_product->etc_product();
+		$data=array("data_result"=>$result);
 		$this->load->view('top');
 		$this->load->view('shop/etc');
-		$this->load->view('shop/etcshop');
+		$this->load->view('shop/etcshop',$data);
 		$this->load->view('down');
 	}
 	public function sta()
 	{
+		$this->load->model('load_db_product');
+		$result=$this->load_db_product->write_product();
+		$data=array("data_result"=>$result);
 		$this->load->view('top');
 		$this->load->view('shop/sta');
-		$this->load->view('shop/stashop');
+		$this->load->view('shop/stashop',$data);
 		$this->load->view('down');
-	}
-	public function test()
-	{
-		$name = (isset($_GET['name'])?$_GET['name']:'');
-		$price = (isset($_GET['price'])?$_GET['price']:'');
-		$data = array('name'=> $name , 'price'=> $price);
-		$this->load->view('login/inputdata',$data);
 	}
 
 }

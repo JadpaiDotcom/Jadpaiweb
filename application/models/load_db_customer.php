@@ -49,6 +49,8 @@ class Load_db_customer extends CI_Model {
                     $db_c = true;
                     //set session//
                     $_SESSION['customer_username']=$row->customer_username;
+                    $_SESSION['customer_id']=$row->customer_id;
+
                 }
                 else{
                     $this->session->set_flashdata('msg_type','error');
@@ -79,27 +81,6 @@ class Load_db_customer extends CI_Model {
             return $result;
 
         }
-
-        public function se_Detail($lc_plate,$color,$type){
-            if($lc_plate=="" and $color=="" and $type==""){
-                $sql = "SELECT * FROM carid join cartype on type=id_type;";
-            }
-            else{
-                $sql = "SELECT * FROM carid join cartype on type=id_type WHERE lc_plate = '".$lc_plate."' or color='".$color."' or type='".$type."';";
-            }
-            $result=$this->db->query($sql);
-            return $result;
-
-        }
-
-
-
-
-
-
-
-
-
 }
 
  ?>

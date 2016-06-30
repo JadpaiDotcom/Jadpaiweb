@@ -34,7 +34,7 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                        <?php
+                                    <?php
  foreach($data_result->result_array() as $row){
                echo "<div class='col-md-3 col-sm-6'>
                     <div class='single-shop-product'>
@@ -43,9 +43,11 @@
                echo  "<h2><a href=''>".$row['product_name']."</a></h2>
                         <div class='product-carousel-price'>
                             <ins>".$row['product_cost']."บาท</ins>
-                        </div>";   
+                        </div>"; 
+                echo "<form method='POST' action='".site_url('cart')."' >";
+                echo "<input type='text' name='product_id' value='".$row['product_id']."'hidden>";   
                echo         "<div class='product-option-shop'>
-                            <a class='add_to_cart_button' data-quantity='1' data-product_sku='' data-product_id='70' rel='nofollow' href=".site_url('/shop/').">Add to cart</a>
+                            <input type='submit' value='Add to cart'></a></form>
                         </div>                       
                     </div>
                 </div>";

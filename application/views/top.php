@@ -3,7 +3,6 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +10,7 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="<?php echo base_url();?>style/homepage/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -24,6 +24,7 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
         <li><a href="<?php echo base_url();?>"><i class="fa fa-lg fa-home"></i></a></li>
         <li><a href="<?php echo site_url('welcome/tracking')?>">Tracking</a></li>
         <li><a href="<?php echo site_url('welcome/contact')?>">Contact</a></li>
+        <li><a href="<?php echo site_url('cart');?>">Cart(<?php echo $this->cart->total_items();?>)</a></li>
       </ul>
     </div>
     <div class="fl_right">
@@ -43,10 +44,15 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
         else
         {
           echo "<li> welcome :".$_SESSION['customer_username']."</li>";
+          ///edit///
+          echo "<li><a href=";
+          echo site_url('edit_user_view');
+          echo ">ข้อมูลส่วนตัว</a></li>";
           ////sign-out////
           echo "<li><a href=";
           echo site_url('logout');
           echo ">Logout</a></li>";
+
 
         }
         ?>

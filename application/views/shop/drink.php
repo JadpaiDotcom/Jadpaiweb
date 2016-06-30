@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 </head>
 <div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/shop/drink/bg.jpg')?>');">
   <div id="pageintro" class="hoc clear"> 
@@ -9,7 +8,8 @@
     <article>
       <div>
         <p class="heading">JADPAI</p>
-        <h2 class="heading">Drink</a></h2>
+        <a href="<?php echo site_url('shop/drink')?>"><h2 class="heading">Drink</a></h2>
+      
         <p>เครื่องดื่มหลากหลายอย่างให้เลือกลองชิม</p>
       </div>
     </article>
@@ -20,4 +20,5 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 </body>
+
 </html>

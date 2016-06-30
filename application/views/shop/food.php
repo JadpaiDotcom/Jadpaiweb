@@ -9,7 +9,7 @@
     <article>
       <div>
         <p class="heading">Jadpai</p>
-        <h2 class="heading">Food</h2>
+         <a href="<?php echo site_url('shop/drink')?>"><h2 class="heading">Food</a></h2>
         <p>อาหารมื้อหลัก จัดหนักๆ</p>
       </div>
     </article>

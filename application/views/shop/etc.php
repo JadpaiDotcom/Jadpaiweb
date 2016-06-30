@@ -9,7 +9,7 @@
     <article>
       <div>
         <p class="heading">Jadpai</p>
-        <h2 class="heading">ECT.</h2>
+         <a href="<?php echo site_url('shop/etc')?>"><h2 class="heading">ETC.</a></h2>
         <p>สินค้าของใช้ทั่วไป</p>
       </div>
     </article>

@@ -46,5 +46,17 @@ class Login_customer extends CI_Controller {
 		
 	}
 
+	public function edit_user_view(){
+		
+				
+		$this->load->view();
+
+
+
+	}
+
+
+
+
 
 }
