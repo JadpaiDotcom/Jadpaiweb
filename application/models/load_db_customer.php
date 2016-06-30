@@ -1,40 +1,6 @@
 <?php 
 
 class Load_db_customer extends CI_Model {
-
-        public $title;
-        public $content;
-        public $date;
-
-        public function __construct()
-        {
-                // Call the CI_Model constructor
-                parent::__construct();
-        }
-
-        public function get_last_ten_entries()
-        {
-                $query = $this->db->get('entries', 10);
-                return $query->result();
-        }
-
-       public function insert_entry()
-        {
-                $this->title    = $_POST['title']; // please read the below note
-                $this->content  = $_POST['content'];
-                $this->date     = time();
-
-                $this->db->insert('entries', $this);
-        }
-
-        public function update_entry()
-        {
-                $this->title    = $_POST['title'];
-                $this->content  = $_POST['content'];
-                $this->date     = time();
-
-                $this->db->update('entries', $this, array('id' => $_POST['id']));
-        }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public function checklogin($u,$p){
         	$sql = "SELECT * FROM customer where customer_username = '".$u."'and customer_password = '".$p."';";
@@ -50,6 +16,7 @@ class Load_db_customer extends CI_Model {
                     //set session//
                     $_SESSION['customer_username']=$row->customer_username;
                     $_SESSION['customer_id']=$row->customer_id;
+                    $_SESSION['customer_address']=$row->customer_address;
 
                 }
                 else{
@@ -68,19 +35,21 @@ class Load_db_customer extends CI_Model {
             return $result;
 
         }
-        public function update_data($type,$color,$lc_plate,$time_start,$time_end,$dec_start,$dec_end){
-            $sql="UPDATE carid SET type='".$type."' , color='".$color."',time_start='".$time_start."',time_end='".$time_end."',des_start='".$dec_start."',des_end='".$dec_end."' WHERE lc_plate='".$lc_plate."';";
+        public function update_data($fname,$lname,$password,$address,$tel){
+            $sql="UPDATE customer SET customer_name='".$fname."',customer_lastname='".$lname."',customer_tel='".$tel."',customer_password='".$password."',customer_address='".$address."' WHERE customer_id='".$_SESSION['customer_id']."';";
             $result=$this->db->query($sql);
             return $result;
 
         }
 
-         public function delete_data($lc_plate){
-            $sql="DELETE FROM carid WHERE lc_plate = '".$lc_plate."';";
+
+        public function detail_user(){
+            $sql="SELECT * FROM customer WHERE customer_id='".$_SESSION['customer_id']."';";
             $result=$this->db->query($sql);
             return $result;
 
         }
+
 }
 
  ?>

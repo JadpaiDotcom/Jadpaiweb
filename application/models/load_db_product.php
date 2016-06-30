@@ -44,10 +44,9 @@ class Load_db_product extends CI_Model {
         $sql = "SELECT * FROM product where product_id = '".$product_id."';";
         $result=$this->db->query($sql);
         return $result;
-
-
-
     }
+
+    
 
 
 

@@ -46,8 +46,8 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
           echo "<li> welcome :".$_SESSION['customer_username']."</li>";
           ///edit///
           echo "<li><a href=";
-          echo site_url('edit_user_view');
-          echo ">ข้อมูลส่วนตัว</a></li>";
+          echo site_url('login_customer/edit_user');
+          echo ">แก้ไขข้อมูลส่วนตัว</a></li>";
           ////sign-out////
           echo "<li><a href=";
           echo site_url('logout');

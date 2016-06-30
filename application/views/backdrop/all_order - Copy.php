@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Manager</title>
-    <link rel="stylesheet" href="<?php echo base_url();?>style/backdrop/table.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>style/backdrop/style.css">
   </head>
   <body>
  <div class="container">
@@ -24,8 +24,7 @@
 
 <?php 
   if($datalist->num_rows()==0)echo '<font color="red">Data not found!</font>';   
-  else{ 
-  echo '<div class="tbl-content">';       
+  else{        
  echo '<table border="1" class="three">
                 <tr>
                 <th>รับคำสั่งซื้อ</th>
@@ -51,7 +50,6 @@
                 echo "</tr>";
         }
         echo '</table>';
-        echo '</div>';
         echo "<br><br><br>";
        }
 

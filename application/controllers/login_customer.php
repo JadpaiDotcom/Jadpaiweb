@@ -46,12 +46,23 @@ class Login_customer extends CI_Controller {
 		
 	}
 
-	public function edit_user_view(){
+	public function update_user(){
 		
-				
-		$this->load->view();
+		$fname=$_POST['fname'];
+		$lname=$_POST['lname'];
+		$password=$_POST['password'];
+		$address=$_POST['address'];
+		$tel=$_POST['tel'];
+		$this->load->model('load_db_customer');
+		$result=$this->load_db_customer->update_data($fname,$lname,$password,$address,$tel);	
+		redirect('Welcome');
+	}
 
-
+	public function edit_user(){
+		$this->load->model('load_db_customer');
+		$result=$this->load_db_customer->detail_user();
+		$data=array("data_result"=>$result);
+		$this->load->view('login/edit_form',$data);
 
 	}
 

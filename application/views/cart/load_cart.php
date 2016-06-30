@@ -71,5 +71,7 @@ $this->cart->insert($product);
 
 </table>
 
+<a href="<?php echo site_url('order') ?>">ยืนยันการสั่งซื้อ</a>
+
 
 
