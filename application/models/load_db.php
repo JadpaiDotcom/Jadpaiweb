@@ -35,14 +35,32 @@ class Load_db extends CI_Model {
         }
 
          public function getDetail_emp(){
-            $sql = "SELECT * FROM `employee`";
+            $sql = "SELECT * FROM `employee` WHERE employee_type='3'";
             $result=$this->db->query($sql);
             return $result;
         }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public function update_order($id_emp,$order_id){
+            $sql="UPDATE `order` SET `order_status`='2' WHERE `order_id`='".$order_id."';";
+            $this->db->query($sql);
+            $sql2="INSERT INTO buy (buy_date, `order_order_id`, `employee_employee_id`) VALUES (now(), '".$order_id."', '".$id_emp."');";
+            $result=$this->db->query($sql2);
+            return $result;
+
+        }
+
+        public function cancel_order($order_id){
+             $sql="UPDATE `order` SET `order_status`='4' WHERE `order_id`='$order_id'";
+           /* $sql="UPDATE order SET order_status='4' WHERE order_id='".$order_id."';";*/
+            $result=$this->db->query($sql);
+            return $result;
+
+        }
 
 }
 
-
+        
 
  ?>

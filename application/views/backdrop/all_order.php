@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Manager</title>
-    <link rel="stylesheet" href="<?php echo base_url();?>style/backdrop/table.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>style/backdrop/style.css">
   </head>
   <body>
  <div class="container">
@@ -28,37 +28,37 @@
   echo '<div class="tbl-content">';       
  echo '<table border="1" class="three">
                 <tr>
-                <th>รับคำสั่งซื้อ</th>
-                <th>ยกเลิก</th>
                 <th>Employee</th>
+                <th>status</th>
+                <th>confirm</th>
                 <th>OrderID</th>
                 <th>Sale status</th>
                 <th>Order_status</th>
                 <th>order_date</th>
-                <th>Name Customer</th>
-                <th>buy_id</th>';
+                <th>Name Customer</th>';
                foreach($datalist->result() as $row){
+                echo "<form method='POST' action='".site_url('op/update_order')."'>";
+                echo "<input name='product_id' value='".$row->order_id."' hidden>";
                 echo "<tr>";
-                echo '<td><a href="'.site_url('employeeclass/edit/'.$row->order_id).'">
-                <input type="button" value="รับคำสั่งซื้อ"></a></td>';
-                echo '<td><a href="'.site_url('employeeclass/delete/'.$row->order_id).'">
-                <input type="button" value="ยกเลิก"></a></td>';
-                echo "<td><select>";
-                foreach($emp->result() as $row){
-                       echo "<option value=".$row->employee_id.">".$row->employee_name."</option>";
+                 echo "<td><select name='id'>";
+                foreach($emp->result() as $item){
+                       echo "<option value=".$item->employee_id.">".$item->employee_name."</option>";
                     }
-                    echo  "</select>";
-                echo "<td>".$row->order_place."</td>";
+                    echo  "</select></td>";
+                    echo "<td><select name='status'>";
+                      echo "<option value='true'>ยืนยัน</option>";
+                      echo "<option value='false'>ยกเลิก</option>";
+                    echo  "</select></td>";
+                echo "<td style=text-align:center><input type='submit' value='ตกลง'</td></form>";
+               echo "<td>".$row->order_id."</td>";
                 echo "<td>".$row->sale_name."</td>";
                 echo "<td>".$row->order_name."</td>";
                 echo "<td>".$row->order_date."</td>";
                 echo "<td>".$row->customer_name."</td>";
-                echo "<td>".$row->buy_buy_id."</td>";
                 echo "</tr>";
         }
-        echo '</table>';
-        echo '</div>';
-        echo "<br><br><br>";
+        echo "</table>";
+        echo "</div>";
        }
 
 ?>

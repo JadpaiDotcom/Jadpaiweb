@@ -22,7 +22,7 @@ class Login_emp extends CI_Controller {
 			redirect('/op/');
 		}
 		else if ( $_SESSION['employee_type'] == '3'){
-			echo "SSS3";
+			redirect('/op/op_emp');
 		}
 		}
 		else{

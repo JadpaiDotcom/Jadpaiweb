@@ -14,7 +14,7 @@
       </div>
       <footer>
         <ul class="nospace inline pushright">
-          <li><a class="btn inverse" href="<?php echo site_url('welcome/about')?>">เกี่ยวกับเรา</a></li>
+          <li><a class="btn inverse" href="<?php echo site_url('welcome/Tracking')?>">ติดตามสถานะ</a></li>
           <li><a class="btn" href="<?php echo site_url('shop')?>">เลือกสินค้า</a></li>
         </ul>
       </footer>
