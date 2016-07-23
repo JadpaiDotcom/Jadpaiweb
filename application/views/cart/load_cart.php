@@ -33,7 +33,7 @@ $this->cart->insert($product);
                 > รายการสินค้า </h1>
 
 
-<?php echo form_open('path/to/controller/update/method'); ?>
+<?php echo form_open('cart/update_qt'); ?>
 
 <div class="col-md-4">
 <div class="tbl-content">
@@ -52,7 +52,7 @@ $this->cart->insert($product);
         <?php echo form_hidden($i.'[rowid]', $items['rowid']); ?>
 
         <tr>
-                <td><?php echo form_input(array('name' => $i.'[qty]', 'value' => $items['qty'], 'maxlength' => '3', 'size' => '1')); ?></td>
+                <td><?php echo form_input(array('name' => 'qty'.$i, 'value' => $items['qty'], 'maxlength' => '3', 'size' => '1')); ?></td>
                 <td>
                         <?php echo $items['name']; ?> 
 
@@ -91,6 +91,7 @@ $this->cart->insert($product);
 </div>
 </div>
 <br><br>
+<p><?php echo form_submit('', 'Update your Cart'); ?></p>
 <a href="<?php echo site_url('order') ?>"><input type="button" value="ยืนยันการสั่งซื้อ"></a>
 <a href="<?php echo site_url('shop') ?>"><input type="button" value="กลับไปซื้อสินค้า"></a>
 
