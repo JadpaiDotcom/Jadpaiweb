@@ -4,13 +4,13 @@
 
 </head>
 <div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/homepage/page.png')?>');">
-  <div id="pageintro" class="hoc clear"> 
+  <div id="pageintro" class="hoc clear">
     <!-- ################################################################################################ -->
     <article>
       <div>
         <p class="heading">Jadpai</p>
         <h2 class="heading">จัดไป</h2>
-        <p>กับบริการที่สร้างความสะดวกสบายให้กับคุณ ส่งของที่คุณอยากได้ถึงที่ทันใจ</p>
+        <p>กูคือเอ็กซ์ซิโอ้555+</p>
       </div>
       <footer>
         <ul class="nospace inline pushright">
@@ -26,7 +26,7 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2">
-  <div class="hoc container clear"> 
+  <div class="hoc container clear">
     <!-- ################################################################################################ -->
     <ul class="nospace group cta">
       <li class="one_third first">
