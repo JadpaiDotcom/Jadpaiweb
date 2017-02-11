@@ -1,8 +1,6 @@
 <?php 
 
 class Load_db_emp extends CI_Model {
-
-
         public function getDetailAll(){
             $sql = "SELECT * FROM `order` 
                 join sale_status on id_sale_status = sale_status 
@@ -16,7 +14,7 @@ class Load_db_emp extends CI_Model {
         }
 
         public function update_emp_tran($order_id){
-            $sql = "UPDATE `order` SET `order_status`='3' WHERE `order_id`='".$order_id."';";
+            $sql = "UPDATE `order` SET `order_status`='3' , `sale_status`='2' WHERE `order_id`='".$order_id."';";
             $result=$this->db->query($sql);
             return $result;
         }

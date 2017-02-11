@@ -4,7 +4,17 @@ class Load_db_product extends CI_Model {
 
     public function food_product()
     {
-        $sql = "SELECT * FROM product where product_type = '1';";
+        $sql = "SELECT * FROM product p
+            where product_type = '1';";
+        $result=$this->db->query($sql);
+        return $result;
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public function store_product($id_store)
+    {
+        $sql = "SELECT * FROM product p
+            JOIN store s ON p.product_store = s.store_id
+            where product_type = '1' AND store_id = '".$id_store."';";
         $result=$this->db->query($sql);
         return $result;
     }

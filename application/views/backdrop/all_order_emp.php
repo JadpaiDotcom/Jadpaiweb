@@ -15,8 +15,8 @@
                 <h4 class="page-header">
                     <?php echo "welcome   ".$_SESSION['employee_username']."(พนักงาน)";    ?>
                     <form method="post" action="<?php echo site_url();?>">
-<br><br><input type="submit" value="logout" >
-</form>
+                        <br><br><input type="submit" value="logout" >
+                    </form>
                  </h4>
 
             </div>
@@ -38,7 +38,7 @@
                 <th>จำนวน</th>';
                 $check=0;
                foreach($datalist->result() as $row){
-                if ($row->order_status != 3 && $row->order_status != 4 ) {
+                if ($row->order_status == 2 ) {
                     echo "<tr>";
                     if ($check!=$row->order_id) {
                         echo '<td style=text-align:center aline="center"><a href="'.site_url('op/update_emp_tran/'.$row->order_id).'">

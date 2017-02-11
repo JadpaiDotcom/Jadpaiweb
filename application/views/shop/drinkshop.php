@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop Page- Ustora Demo</title>
-
+    
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo base_url()?>style/shop/css/bootstrap.min.css">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url()?>style/shop/css/font-awesome.min.css">
-
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url()?>style/shop/css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo base_url()?>style/shop/style.css">
@@ -43,15 +43,15 @@
                echo  "<h2><a href=''>".$row['product_name']."</a></h2>
                         <div class='product-carousel-price'>
                             <ins>".$row['product_cost']."บาท</ins>
-                        </div>";
+                        </div>"; 
                 echo "<form method='POST' action='".site_url('cart')."' >";
-                echo "<input type='text' name='product_id' value='".$row['product_id']."'hidden>";
+                echo "<input type='text' name='product_id' value='".$row['product_id']."'hidden>";   
                echo         "<div class='product-option-shop'>
                             <input type='submit' value='Add to cart'></a></form>
-                        </div>
+                        </div>                       
                     </div>
                 </div>";
-
+          
 }
                 ?>
 
@@ -64,17 +64,17 @@
 
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-
+    
     <!-- Bootstrap JS form CDN -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+    
     <!-- jQuery sticky menu -->
     <script src="<?php echo base_url()?>style/shop/js/owl.carousel.min.js"></script>
     <script src="<?php echo base_url()?>style/shop/js/jquery.sticky.js"></script>
-
+    
     <!-- jQuery easing -->
     <script src="<?php echo base_url()?>style/shop/js/jquery.easing.1.3.min.js"></script>
-
+    
     <!-- Main Script -->
     <script src="<?php echo base_url()?>style/shop/js/main.js"></script>
 

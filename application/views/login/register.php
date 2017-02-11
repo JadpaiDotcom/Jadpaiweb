@@ -1,55 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>Register form with HTML5 using placeholder and CSS3</title>
+</head>
+<style type="text/css">
+    #wrapper {
+        width:450px;
+        margin:0 auto;
+        font-family:Verdana, sans-serif;
+    }
+    legend {
+        color:#0481b1;
+        font-size:16px;
+        padding:0 10px;
+        background:#fff;
+        -moz-border-radius:4px;
+        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
+        padding:5px 10px;
+        text-transform:uppercase;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    fieldset {
+        border-radius:4px;
+        background: #fff;
+        background: -moz-linear-gradient(#fff, #f9fdff);
+        background: -o-linear-gradient(#fff, #f9fdff);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); /
+        background: -webkit-linear-gradient(#fff, #f9fdff);
+        padding:20px;
+        border-color:rgba(4, 129, 177, 0.4);
+    }
+    input,
+    textarea {
+        color: #373737;
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.2em;
+        margin-bottom:15px;
 
-<!DOCTYPE html>
-<html>
-	<head>	
-		<title>Register-login-form Website Template | Home :: w3layouts</title>
-		<link href="<?php echo base_url();?>style/register/css/style.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!--webfonts-->
-		<link href='http://fonts.googleapis.com/css?family=Lobster|Pacifico:400,700,300|Roboto:400,100,100italic,300,300italic,400italic,500italic,500' ' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,500,600,700,300' rel='stylesheet' type='text/css'>
-		<!--webfonts-->
-	</head>
-	<body>	
-			<!--start-login-form-->
-				<div class="main">
-			    	<div class="login-head">
-					</div>
-					<div  class="wrap">
-						  <div class="Regisration">
-						  	<div class="Regisration-head">
-						    	<h2><span></span>Register</h2>
-						 	 </div>
-						  	<form action="<?php echo site_url('login_customer/register_new')?>" method="POST">
-						  		<input type="text" name="fname" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'fname';}" >
-						  		<input type="text" name="lname" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'lname';}" >
-						  		<input type="text" name="tel" value="Tel." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'tel';}" >
-						  		<input type="text" name="address" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'address';}" >
-						  		<input type="text" name="username" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'username';}" >
-								<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}" >
-								<input type="password" value=" Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}" >
-								 <div class="Remember-me">
-								<div class="p-container">
-								<div class ="clear"></div>
-							</div>
-												 
-								<div class="submit">
-									<input type="submit" onclick="myFunction()" value="Sign Me Up >" >
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        background:#f5fcfe;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        -webkit-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 400ms;
+        -moz-transition-property: width, background;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 400ms;
+        -o-transition-property: width, background;
+        -o-transition-timing-function: ease;
+        width: 380px;
+
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+    input[type="submit"]{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 22px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    textarea {
+        padding:3px;
+        width:96%;
+        height:100px;
+    }
+    textarea:focus {
+        background:#ebf8fd;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        opacity:0.6;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        border-color:#ccc;
+    }
+    .small {
+        line-height:14px;
+        font-size:12px;
+        color:#999898;
+        margin-bottom:3px;
+    }
+</style>
+<body bgcolor="orange">
+    <div id="wrapper">
+        <form action="<?php echo site_url('login_customer/register_new')?>" method="POST">
+            <fieldset>
+                <legend>Register Form</legend>
+                <div>
+                    <input type="text" name="fname" placeholder="First Name" required/>
+                </div>
+                <div>
+                    <input type="text" name="lname" placeholder="Last Name" required />
+                </div>
+								<div>
+										<input type="text" name="tel" placeholder="Tel" required />
 								</div>
-									<div class="clear"> </div>
+								<div>
+										<textarea name="address" placeholder="Address" required ></textarea>
+										<div class="small">EX: หอ 7 ห้อง 224 </div>
+										<br>
 								</div>
-											
-						  </form>
-					</div>
-				
-			</div>
-				<!--//End-login-form-->	
-						<div class ="copy-right">
-							<p>Template by <a href="#">W3layouts</a></p>
-						</div>
-			  </div>
-	</body>
+								<div>
+										<input type="text" name="username" placeholder="Username" required />
+								</div>
+                <div>
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+
+                <input type="submit" name="submit" value="Send"/>
+            </fieldset>
+        </form>
+    </div>
+</body>
 </html>
-
-

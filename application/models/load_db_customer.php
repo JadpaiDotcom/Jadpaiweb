@@ -17,6 +17,7 @@ class Load_db_customer extends CI_Model {
                     $_SESSION['customer_username']=$row->customer_username;
                     $_SESSION['customer_id']=$row->customer_id;
                     $_SESSION['customer_address']=$row->customer_address;
+                    $_SESSION['customer_tel']=$row->customer_tel;
 
                 }
                 else{

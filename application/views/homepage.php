@@ -3,14 +3,14 @@
 <head>
 
 </head>
-<div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/homepage/page.png')?>');">
-  <div id="pageintro" class="hoc clear">
+<body>
+<div class="wrapper bgded overlay" style="background-image:url('<?php echo base_url('img/homepage/h1.jpg')?>');">
+  <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <div>
-        <p class="heading">Jadpai</p>
-        <h2 class="heading">จัดไป</h2>
-        <p>กูคือเอ็กซ์ซิโอ้555+</p>
+    <div>
+        <h2 class="heading">ยินดีต้อนรับ</h2>
+        <p class="heading">เปิดให้บริการ 18.00 - 20.30 น.</p>
       </div>
       <footer>
         <ul class="nospace inline pushright">
@@ -26,7 +26,7 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2">
-  <div class="hoc container clear">
+  <div class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <ul class="nospace group cta">
       <li class="one_third first">
