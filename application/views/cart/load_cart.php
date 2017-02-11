@@ -16,6 +16,7 @@ if($data_result!=""){
         'name' => $product_name
          );
 $this->cart->insert($product);
+redirect('/shop');
 }
 ?>
 
@@ -54,7 +55,7 @@ $this->cart->insert($product);
         <tr>
                 <td><?php echo form_input(array('name' => 'qty'.$i, 'value' => $items['qty'], 'maxlength' => '3', 'size' => '1')); ?></td>
                 <td>
-                        <?php echo $items['name']; ?> 
+                        <?php echo $items['name']; ?>
 
                         <?php if ($this->cart->has_options($items['rowid']) == TRUE): ?>
 
@@ -81,7 +82,7 @@ $this->cart->insert($product);
 
 <tr>
         <td colspan="4"> </td>
-        <td class="right">Total&nbsp&nbsp฿<?php echo $this->cart->format_number($this->cart->total()); ?></td> 
+        <td class="right">Total&nbsp&nbsp฿<?php echo $this->cart->format_number($this->cart->total()); ?></td>
 </tr>
 
 <!-- </table> -->
@@ -97,5 +98,3 @@ $this->cart->insert($product);
 
 </body>
 </html>
-
-

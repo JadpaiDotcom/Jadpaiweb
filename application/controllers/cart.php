@@ -34,5 +34,5 @@ class Cart extends CI_Controller {
 		}
 		$this->load->view('cart/load_cart');
 	}
-	
+
 }

@@ -25,7 +25,7 @@ class shop extends CI_Controller {
 		$this->load->view('down');
 	}
 	public function snack()
-	{	
+	{
 		$this->load->model('load_db_product');
 		$result=$this->load_db_product->snack_product();
 		$data=array("data_result"=>$result);
@@ -45,7 +45,7 @@ class shop extends CI_Controller {
 		$this->load->view('down');
 	}
 	public function etc()
-	{	
+	{
 		$this->load->model('load_db_product');
 		$result=$this->load_db_product->etc_product();
 		$data=array("data_result"=>$result);
