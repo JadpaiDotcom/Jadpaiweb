@@ -16,11 +16,11 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
+  <div id="topbar" class="hoc clear">
     <!-- ################################################################################################ -->
     <div class="fl_left">
       <ul class="nospace">
-        <li><a href="<?php echo base_url();?>"><h1>Walailife</h1></a></li>
+        <li><a href="<?php echo base_url();?>"><h1>Jadpai</h1></a></li>
       </ul>
     </div>
     <div class="fl_right">
@@ -57,13 +57,13 @@ $_SESSION['customer_username']=(isset($_SESSION['customer_username'])?$_SESSION[
 </div>
 <!-- ##############  ส่วนที่อยู่ด้านล่างของ หน้า Top มีปุ่มให้เลือกด้วย############################## -->
 <!-- <div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-   
+  <header id="header" class="hoc clear">
+
     <div id="logo" class="fl_left">
       <h1>Walailife</h1>
       <p>Delivery</p>
     </div>
-    
+
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="<?php echo base_url();?>">Home</a></li>

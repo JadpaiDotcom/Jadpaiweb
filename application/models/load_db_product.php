@@ -1,11 +1,10 @@
-<?php 
+<?php
 
 class Load_db_product extends CI_Model {
 
     public function food_product()
     {
-        $sql = "SELECT * FROM product p
-            where product_type = '1';";
+        $sql = "SELECT * FROM product p where product_type = '1';";
         $result=$this->db->query($sql);
         return $result;
     }
@@ -56,7 +55,7 @@ class Load_db_product extends CI_Model {
         return $result;
     }
 
-    
+
 
 
 

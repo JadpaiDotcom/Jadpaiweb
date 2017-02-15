@@ -19,6 +19,7 @@ class Invoice extends CI_Controller {
     $this->load->view('/cart/invoice1',$data);
   }
   public function destroy_cart(){
+    echo "<script language=\"JavaScript\"> alert('คำสั่งการซื้อได้รับการการบันทึกลงระบบเรียบร้อย สามารถติดตามสถานะการติดตามได้ที่ Tracking');</script>" ;
     $this->cart->destroy();
     redirect('/welcome/');
   }

@@ -111,7 +111,7 @@ if($data_result!=""){
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="http://nextstepwebs.com/images/logo.png" style="width:100%; max-width:300px;">
+                                <img src="<?php echo base_url();?>img/invoice/logo.png" style="width:100%; max-width:300px;">
                             </td>
                             <td align="right">
                                 Invoice: <?php echo $order_id;?><br>

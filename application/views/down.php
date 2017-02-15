@@ -2,10 +2,10 @@
 <html>
 <head>
 <div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
+  <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="<?php echo base_url();?>">walailife.com</a></p>
-    <p class="fl_right">by Quark</p>
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="<?php echo base_url();?>">Jadpai.com</a></p>
+    <p class="fl_right">by Jadpai</p>
     <!-- ################################################################################################ -->
   </div>
 </div>
